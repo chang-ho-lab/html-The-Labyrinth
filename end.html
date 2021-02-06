@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+      <title>타임아웃</title>
+	  <audio controls loop autoplay>
+	<source src="브금3.mp3" type="audio/mpeg">
+	</audio>
+	<!-- 브금 설정 -->
+	  <style>
+   body {
+      background-image: url("./end.jpg");
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position: 80% 80%;
+      background-attachment: fixed;
+	  }
+   <!--
+   background-image : url(배경이미지의 위치)
+   background-repeat : 배경이미지의 반복 설정 (no-repeat = 반복 없음)
+   background-position : 배경이미지의 위치(right top = 오른쪽 위)
+   background-attachment : 배경이미지의 고정 여부(fixed)
+   -->
+   </style>
+  </head>
+  <body style="background-image:./end.jpg>
+  <body>
+  <table border="0" background = "black" align="center" cellpadding="5" cellspacing="0" style="font-size:10pt;">
+    <tr>
+    <td width="381" height="85" valign="top"><font color="red"><span id="texts">&nbsp;</span></font></td>
+    </tr>
+</table>
+ 
+<script language="JavaScript">
+
+var text = "<br><br><br><br>타이머의 시간이 다되었다. 시간이 다 되자 타이머는 멈추었고 갑자기 방들이 점점 좁아짐을 느꼈다.<br><br> 나와 친구들은 모두 벽으로 달려가 좁아지는걸 막으려고 안간힘을 쓰고있다.<br><br> 주위에 사물들이 다 쓰러지고 우리는 주변에 사물들을 끼우고 멈춰보려해도 소용없었다.<br><br> 모두가 포기하려던 순간 어째서인지 좁아짐이 멈추었고 조그마하게 작은 통로가 생겼다. 우리는 이 좁은방에서 계속 있을 수 없었던지라 구멍을 따라서 앞으로 나아가기 시작했다.<br><br> 그 순간 우리 뒤에 누군가 있었던것 마냥 우리가 들어갔던 구멍은 막혀있었고, 우리는 이제 앞으로 나아갈 수 밖에 없었다.<br><br> 구멍 끝에 도달했을 때, 우리들 앞에는 모든게 막혀있는 방과 그 앞에는 유선이 어머니의 시체가 있었다.<br><br> 우린 아무 생각할틈 없이 이곳에 갖혀버렸고 우리중에 누군가는 없었다.";
+var cnt = 0;
+var speed = 70; //글자가 찍히는 속도
+var timer1 = null;
+ 
+function gogogo(){
+    document.getElementById('texts').innerHTML = text.substring(0, cnt) + "_";
+    cnt++;
+    timer1 = setTimeout('gogogo()', speed);
+ 
+    if(text.length < cnt){
+		clearTimeout(timer1)
+        cnt = 0;
+    }
+}
+ 
+gogogo();
+
+</script>
+
+  </body>
+</html>

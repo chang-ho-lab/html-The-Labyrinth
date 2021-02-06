@@ -1,0 +1,121 @@
+﻿ <!DOCTYPE html>
+<html>
+   <head>
+   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+   <title> 3조 인터넷 프로그래밍 팀프로젝트</title>
+   <audio controls loop autoplay>
+	<source src="브금3.mp3" type="audio/mpeg">
+	</audio>
+	<!-- 브금 설정 -->
+   <script language="JavaScript"> 
+      var SetTime = 300;      // 최초 설정 시간(기본 : 초)
+      function msg_time() {   // 1초씩 카운트
+         m = Math.floor(SetTime / 60) + ":" + (SetTime % 60) + "";   // 남은 시간 계산         
+          var msg = " <font color='red' size='10pt'>" + m + "</font size='10pt'> ";         
+         document.all.ViewTimer.innerHTML = msg;      // div 영역에 보여줌                
+         SetTime--;               // 1초씩 감소        
+         if (SetTime < 0) {         // 시간이 종료 되었으면..            
+            //clearInterval(tid);       타이머 해제
+            window.location.href = './end.html';
+         }        
+      }
+     window.onload = function TimerStart(){ tid=setInterval('msg_time()',1000) };      
+   </script>
+   <style>
+   body {
+      background-image: url("./intro_background.jpg");
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-attachment: fixed;
+   }
+   <!--
+   background-image : url(배경이미지의 위치)
+   background-repeat : 배경이미지의 반복 설정 (no-repeat = 반복 없음)
+   background-position : 배경이미지의 위치(right top = 오른쪽 위)
+   background-attachment : 배경이미지의 고정 여부(fixed)
+   -->
+   </style>
+   <style type="text/css">
+   body { color:#FFFFFF; }
+   </style>
+   </head>
+   <div id="ViewTimer"></div>
+   <body style="background-color:#000000">
+   <div>
+   <center><br><br><br><br><br>
+     <table border="0" bgcolor="black" align="center" cellpadding="3" cellspacing="0" style="font-size:10pt;">
+    <tr>
+    <td width="381" height="60" valign="top"><font color="red"><font face = "cursive"><span id="texts">&nbsp;</span></font></td>
+    </tr>
+</table>
+ 
+<script language="JavaScript">
+
+var text = "누군가..목숨이 걸린 긴장된 상황속에서 <br><br>씨익.. 웃는듯한 소리를 들었다 기분탓인가..?";
+var cnt = 0;
+var speed = 70; //글자가 찍히는 속도
+var timer1 = null;
+ 
+function gogogo(){
+    document.getElementById('texts').innerHTML = text.substring(0, cnt) + "_";
+    cnt++;
+    timer1 = setTimeout('gogogo()', speed);
+ 
+    if(text.length < cnt){
+		clearTimeout(timer1)
+        cnt = 0;
+    }
+}
+ 
+gogogo();
+
+</script>
+<br><br><br><br>
+   쪽지를보고 암호를 풀어보니 휴대폰에는 죽은 친구의 사진과 이름은 "J"라는 문구가 써져있었다. <br><br>
+   범인에 대한 힌트인거같다.<br><br>
+	휴대폰으로 전화를 해보려 했으나 전파도 안잡히고 통화기록엔 아무도 없었다.<br><br>
+	텅빈 갤러리 하지만 메모만은 남겨져 있었다.<br><br><br><br>
+	
+	<span style="color:red"><font face="cursive">왜 너희가 이곳에 끌려온건지 아니? <br><br>
+	난 너희들이 내 아들의 친구라고 생각했어 하지만 내 아들은 죽었지.. <br><br>
+	너희의 죄를 잘 생각해 너희 때문에 내 아들이 죽었어.<br><br>
+	그리고 나는 알고있어 누가 내 아들을 죽였는지 마음같아선 너희 모두 죽이고싶지만 <br><br>
+	끝까지 고통스럽게 해줄꺼야 살아남을 수 있다는 희망속에서 처참하게 죽어봐<br><br>
+	그렇다면 조금이라도 내 아들을 위로할 수 있을거야</font><br><br><br><br></span>
+
+
+	이 글을 본 우리는 우릴 모두 요기로 끌고온 사람은 유선의 어머님이라는 것을 쉽게 알 수 있었다.<br><br>
+	우리는 처음에 유선이의 어머님을 욕하고 당장 내보내달라고 말을해도 소용없는짓이였다.<br><br>
+	우리 모두 유선이를 친구라는 이름 아래에서 왕따시키고 무시해왔다는 사실에 메모를 읽고 아무말도 할 수 없었다.<br><br>
+	휴대폰의 암호는 풀었지만 아직 문의 암호는 풀어낸 것은 아니다.<br><br>
+	이번 문은 전자식으로 되어있었다. <br><br>
+	문옆에는 칼로 세겨둔거 같은 ㄱ ㄴ ㄷ ㅁ 의 표시가 있었다.<br><br>
+	<img src="./room3.jpg"><br>
+	 문제힌트 : 모양<br><br><br><br>
+
+	반친구가 죽었고 나를 포함한 5명은 아무도 모르는 공간에 갖혔다. <br><br>
+	30분이라는 시간제한 속에서 문제를 풀고 나가야한다. <br><br>
+	2번 문제까지 풀고 힌트속에서 승기는 용의선상에서 벗어날 수 있었고 남은건 나(재준) 정호 지수 호준 이였다. <br><br>
+	우리는 우릴가둔 범인은 유선이네 어머님이란 것을 알고 있었지만 살아남기 위해서 문제를 풀고 방을 나가야했다.<br><br>
+   </center>
+   </div>
+   	<button onclick="myFunction()"" style="color:yellow; border-radius: 5px; background:black;">정답입력</button>
+	<script type="text/javascript"> 
+	function myFunction() {
+		var answer = prompt("정답을 입력하세요.","");
+		if(answer=='GCFE') {
+		window.location.href = './room4.html';
+		} else {
+		alert("오답입니다.");
+		}
+	}
+	</script> 
+   <div>
+   <!-- 힌트 이벤트 부여 -->
+	<button onclick="window.open('hint3.html','hint','width=650,height=400,location=no,status=no,scrollbars=yes')"" style="color:yellow; border-radius: 5px; background:black;">힌트</button>
+<!-- 메모장 이벤트 부여 -->
+	<button onclick="window.open('memo.html','window_name','width=740,height=352,location=no,status=no,scrollbars=yes')"" style="color:yellow; border-radius: 5px; background:black;">메모장</button>
+	</div>
+	</body>
+</html>

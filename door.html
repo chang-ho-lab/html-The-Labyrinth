@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+   <head>
+   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+   <title> 3조 인터넷 프로그래밍 팀프로젝트</title>
+   <audio controls loop autoplay>
+	<source src="브금3.mp3" type="audio/mpeg">
+	</audio>
+	<!-- 브금 설정 -->
+   <style>
+   body {
+      background-image: url("./intro_background.jpg");
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-attachment: fixed;
+   }
+   <!--
+   background-image : url(배경이미지의 위치)
+   background-repeat : 배경이미지의 반복 설정 (no-repeat = 반복 없음)
+   background-position : 배경이미지의 위치(right top = 오른쪽 위)
+   background-attachment : 배경이미지의 고정 여부(fixed)
+   -->
+   </style>
+   <style type="text/css">
+   body { color:#FFFFFF; }
+   </style>
+   </head>
+   <body style="background-color:#000000">
+   <div>
+   <center><br><br><br><br><br>
+   고등학교 2학년 중반쯤 반친구(유선)가 죽었다<br><br>
+   나(재준) 정호 지수 승기 호준이는 여기 왜 끌려왔는지, 여기가 어딘지 아직 모른다<br><br>
+   확실한건 나를 포함한 5명의 친구들이 납치되었고 우리는 30분이라는 타이머를 볼 수 있었다<br><br>
+   주변을 둘러보니 잠겨진 문과 규칙이라고 써져있는 빨간글씨,<br><br>
+   죽은 유선이의 물건들 그리고 조그마한 글씨로 '범인은 이안에 있다.' 라고 쓰여있었다<br><br>
+   모두가 깨어날 때 우린 범인을 잡는것보다 누가 이런 장난을 친거냐고 화내고<br><br>
+   심지어 문을 부수려고도 했지만 불가능했다<br><br>
+   모두가 조금 진정이 됬을 때 내가 말을꺼냈다<br><br>
+   서로 유선이와 어떤 사이인지 물어봤을 때<br><br><br><br>
+   <span style="color:red"><b>나 : 범생이지만 유선이한테 지는 2등 하지만 함께 공부하고 친함 <br><br>
+   정호 : 인간관계가 좋아서 몇번 말은했지만 무시하는경향이 있음 <br><br>
+   지수 : 손재주가 좋아서 좋아하는 유선이에게 선물을 주고 고백함 <br><br>
+   승기 : 항상 준비성이 떨어져 유선이한테 빌린게 많음<br><br>
+   호준 : 운동을 잘해서 공부만 하는 유선이를 무시함, 별 사이 아님</b><br><br><br>
+   이렇게 말을 끝내고 모두 침묵에 가라앉은채 규칙을 읽어보았다<br><br><br><br></span>
+   -규칙-<br><br>
+   1. 문제를 풀 때마다 범인에 대한 실마리를 준다.<br><br>
+   2. 모든 문제를 풀고 범인을 찾아야한다<br><br>
+   3. 30분동안 게임을 클리어 못하면 게임이 오버된다<br><br>
+   4. 글을 잘 읽고 룰을 숙지하면 게임을 시작해라<br><br>
+   5. 게임을 클리어할 때 마다 범인의 힌트를 줄것이다<br><br>
+    - 이제 문을 열 수 있을꺼같다. 이제 나가보자 -<br><br>
+
+   <img src="./quiz2.jpg"><br><br><br>
+  
+   </center> 
+   </div>
+	<button onclick="myFunction()"" style="color:yellow; border-radius: 5px; background:black;">정답입력</button>
+	<script type="text/javascript"> 
+	function myFunction() {
+		var answer = prompt("정답을 입력하세요.","");
+		if(answer=='open') {
+		window.location.href = './room.html';
+		} else {
+		alert("오답입니다.");
+		}
+	}
+	</script>    
+   <div>
+<!-- 힌트 이벤트 부여 -->
+	<button onclick="window.open('hint1.html','hint','width=650,height=400,location=no,status=no,scrollbars=yes')"" style="color:yellow; border-radius: 5px; background:black;">힌트</button>
+<!-- 메모장 이벤트 부여 -->
+	<button onclick="window.open('memo.html','window_name','width=740,height=352,location=no,status=no,scrollbars=yes')"" style="color:yellow; border-radius: 5px; background:black;">메모장</button>
+	</div>
+	</body>
+</html>

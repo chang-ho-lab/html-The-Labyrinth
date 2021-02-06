@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+      <title>유선의 일기 1</title>
+  </head>
+  <body>
+<table border="0" bgcolor="black" align="center" cellpadding="5" cellspacing="0" style="font-size:10pt;">
+    <tr>
+    <td width="381" height="85" valign="top"><font color="lime"><span id="texts">&nbsp;</span></font></td>
+    </tr>
+</table>
+ 
+<script language="JavaScript">
+
+var text = "힌트 1(유선의 일기)<br><br>오늘도 나는 괴롭힘을 당했다. 나는 언제나 재준이에게 가장 심하게 맞는다.<br><br>나는 재준이가 내 친구라고 생각했다.<br><br>같이 공부도 하고 잘 놀았는데..<br><br><br>그치만 변해버렸다..<br><br><br>도대체 왜 그렇게까지 변했는지는 잘 모르겠다.<br><br>하지만 그중에서도 나는 운동도 잘하고 싸움도 잘하는 호준이가 제일 무섭다.<br><br>반항하면 어떻게 될지 모를뿐이다.";
+var cnt = 0;
+var speed = 70; //글자가 찍히는 속도
+var timer1 = null;
+ 
+function gogogo(){
+    document.getElementById('texts').innerHTML = text.substring(0, cnt) + "_";
+    cnt++;
+    timer1 = setTimeout('gogogo()', speed);
+ 
+    if(text.length < cnt){
+		clearTimeout(timer1)
+        cnt = 0;
+    }
+}
+ 
+gogogo();
+
+</script>
+  </body>
+</html>

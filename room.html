@@ -1,0 +1,80 @@
+﻿ <!DOCTYPE html>
+<html>
+   <head>
+   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+   <title> 3조 인터넷 프로그래밍 팀프로젝트</title>
+   <audio controls loop autoplay>
+	<source src="브금3.mp3" type="audio/mpeg">
+	</audio>
+	<!-- 브금 설정 -->
+   <script language="JavaScript"> 
+      var SetTime = 300;      // 최초 설정 시간(기본 : 초)
+      function msg_time() {   // 1초씩 카운트
+         m = Math.floor(SetTime / 60) + ":" + (SetTime % 60) + "";   // 남은 시간 계산         
+         var msg = " <font color='red' size='20pt'>" + m + "</font> ";         
+         document.all.ViewTimer.innerHTML = msg;      // div 영역에 보여줌                
+         SetTime--;               // 1초씩 감소        
+         if (SetTime < 0) {         // 시간이 종료 되었으면..            
+            //clearInterval(tid);       타이머 해제
+            window.location.href = './end.html';
+         }        
+      }
+     window.onload = function TimerStart(){ tid=setInterval('msg_time()',1000) };      
+   </script>
+   <style>
+   body {
+      background-image: url("./intro_background.jpg");
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-attachment: fixed;
+   }
+   <!--
+   background-image : url(배경이미지의 위치)
+   background-repeat : 배경이미지의 반복 설정 (no-repeat = 반복 없음)
+   background-position : 배경이미지의 위치(right top = 오른쪽 위)
+   background-attachment : 배경이미지의 고정 여부(fixed)
+   -->
+   </style>
+   <style type="text/css">
+   body { color:#FFFFFF; }
+   </style>
+   </head>
+   <div id="ViewTimer"></div>
+   <body style="background-color:#000000">
+   <div>
+   <center><br><br><br><br><br>
+   범인은 악취미인지 사람을 가두고 30분만에 탈출을 못하면 죽인다니......<br><br>
+   지수와 정호는 불평을했다.<br><br>
+   하지만 그것도 잠시......<br><br>
+   우리는 자기가 죽을 수 있다는 생각에 냉정해졌고 <br><br>
+   우리중에 누군가 유선이를 죽인 범인이 있다는생각에 <br><br>
+   더욱이 긴장하게 되었다.<br><br>
+   <img src="./a1.jpg"><br><br>
+   문을열고 나갔을 때 지하실인거 같았고 숫자로된 4개의 자물쇠로 문은 굳게 잠겨있었다.<br><br>
+   우린 방안에서 이 문을 열 수 있을만한 단서를 찾기 시작했다.<br><br>
+   구석구석 뒤지며 헝클어진 방안에서 우린 조그마한 종이를 발견할 수 있었다.<br><br>
+   맨처음 종이를 발견한 호준이는 종이를 펼쳐보았다.<br><br>
+   <img src="./quiz3.jpg"><br><br>
+   이 문자를 본 우리는 정답이 뭘지 생각했다.....
+   </center>
+   </div>
+   	<button onclick="myFunction()"" style="color:yellow; border-radius: 5px; background:black;">정답입력</button>
+	<script type="text/javascript"> 
+	function myFunction() {
+		var answer = prompt("정답을 입력하세요.","");
+		if(answer=='2538') {
+		window.location.href = './room2.html';
+		} else {
+		alert("오답입니다.");
+		}
+	}
+	</script> 
+   <div>
+<!-- 힌트 이벤트 부여 -->
+	<button onclick="window.open('hint1.html','hint','width=650,height=400,location=no,status=no,scrollbars=yes')"" style="color:yellow; border-radius: 5px; background:black;">힌트</button>
+<!-- 메모장 이벤트 부여 -->
+	<button onclick="window.open('memo.html','window_name','width=740,height=352,location=no,status=no,scrollbars=yes')"" style="  color:yellow; border-radius: 5px; background:black;">메모장</button>
+	</div>
+	</body>
+</html>

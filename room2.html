@@ -1,0 +1,79 @@
+﻿ <!DOCTYPE html>
+<html>
+   <head>
+   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+   <title> 3조 인터넷 프로그래밍 팀프로젝트</title>
+   <audio controls loop autoplay>
+	<source src="브금3.mp3" type="audio/mpeg">
+	</audio>
+	<!-- 브금 설정 -->
+   <script language="JavaScript"> 
+      var SetTime = 300;      // 최초 설정 시간(기본 : 초)
+      function msg_time() {   // 1초씩 카운트
+         m = Math.floor(SetTime / 60) + ":" + (SetTime % 60) + "";   // 남은 시간 계산         
+          var msg = " <font color='red' size='10pt'>" + m + "</font size='10pt'> ";         
+         document.all.ViewTimer.innerHTML = msg;      // div 영역에 보여줌                
+         SetTime--;               // 1초씩 감소        
+         if (SetTime < 0) {         // 시간이 종료 되었으면..            
+            //clearInterval(tid);       타이머 해제
+            window.location.href = './end.html';
+         }        
+      }
+     window.onload = function TimerStart(){ tid=setInterval('msg_time()',1000) };      
+   </script>
+   <style>
+   body {
+      background-image: url("./intro_background.jpg");
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-attachment: fixed;
+   }
+   <!--
+   background-image : url(배경이미지의 위치)
+   background-repeat : 배경이미지의 반복 설정 (no-repeat = 반복 없음)
+   background-position : 배경이미지의 위치(right top = 오른쪽 위)
+   background-attachment : 배경이미지의 고정 여부(fixed)
+   -->
+   </style>
+   <style type="text/css">
+   body { color:#FFFFFF; }
+   </style>
+   </head>
+   <div id="ViewTimer"></div>
+   <body style="background-color:#000000">
+   <div>
+   <center><br><br><br><br><br>
+   다음 방에 도착한 우리앞에 놓인것은 수많은 상자들이였다.<br><br>
+   <img src="./box.jpg"><br><br>
+	문도 잠겨있었기에 우린 서둘러 상자를 열어보았다.<br><br>
+	얼마다 뒤졌을까 우리는 서둘러야 한다는 생각에 상자들을 빠르게 열기 시작하였고<br><br>
+	텅빈 상자들속에서도 몇개의 중요한 단서 쪽지가 있었다.<br><br>
+	쪽지에는 아래와 같은 사진이있었다.<br><br>
+	모양으로봐선 휴대폰을 열 수 있는 열쇠인거같다.<br><br>
+	우린 다시 머리를 모아서 고민을했다.<br><br>
+	<img src="./room2.jpg"><br>
+	[문제힌트 : 휴대폰]<br><br><br>
+	휴대폰을 가장 먼저 잡은건 나였다. <br><br>
+	혹시 무슨 단서가 있을까 찾아보자했다. <br><br>
+   </center>
+   </div>
+   	<button onclick="myFunction()"" style="color:yellow; border-radius: 5px; background:black;">정답입력</button>
+	<script type="text/javascript"> 
+	function myFunction() {
+		var answer = prompt("정답을 입력하세요.","");
+		if(answer=='6384') {
+		window.location.href = './room3.html';
+		} else {
+		alert("오답입니다.");
+		}
+	}
+	</script> 
+   <div>
+   <!-- 힌트 이벤트 부여 -->
+	<button onclick="window.open('hint2.html','hint','width=650,height=400,location=no,status=no,scrollbars=yes')"" style="color:yellow; border-radius: 5px; background:black;">힌트</button>
+<!-- 메모장 이벤트 부여 -->
+	<button onclick="window.open('memo.html','window_name','width=740,height=352,location=no,status=no,scrollbars=yes')"" style="color:yellow; border-radius: 5px; background:black;">메모장</button>
+	</div>
+	</body>
+</html>

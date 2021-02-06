@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+      <title>유선의 일기 2</title>
+  </head>
+  <body>
+  <table border="0" bgcolor="black" align="center" cellpadding="5" cellspacing="0" style="font-size:10pt;">
+    <tr>
+    <td width="381" height="85" valign="top"><font color="lime"><span id="texts">&nbsp;</span></font></td>
+    </tr>
+</table>
+ 
+<script language="JavaScript">
+
+var text = "힌트 2 (유선의 일기)<br><br><br>오늘은 갑자기 그 무리에 지수가 나에게 선물을 주며 고백했다.<br><br>하지만 난 절대 믿지 않았다.<br><br>이것도 나를 놀리려고하는 속셈이 분명했을 것이다.<br><br>시간이 얼마나 지났나 도대체 내가 무슨잘못을 한지 모르겠다.<br><br>이젠 정말 죽고싶을 뿐이다.<br><br>다시 예전처럼 함께 공부하고 다시 평범한 일상을 지내고싶다.<br><br>";
+var cnt = 0;
+var speed = 70; //글자가 찍히는 속도
+var timer1 = null;
+ 
+function gogogo(){
+    document.getElementById('texts').innerHTML = text.substring(0, cnt) + "_";
+    cnt++;
+    timer1 = setTimeout('gogogo()', speed);
+ 
+    if(text.length < cnt){
+		clearTimeout(timer1)
+        cnt = 0;
+    }
+}
+ 
+gogogo();
+
+</script>
+  </body>
+</html>

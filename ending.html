@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+   <head>
+   <link rel="shortcut icon" href="intro/favicon.ico" type="image/x-icon"/>
+   <title> 3조 인터넷 프로그래밍 팀프로젝트</title>
+   <audio controls loop autoplay>
+	<source src="브금3.mp3" type="audio/mpeg">
+	</audio>
+	<!-- 브금 설정 -->
+   <script type="text/javascript" language="JavaScript">
+function hideDiv (){ 
+  fadeInOut('i01', 'out')
+} 
+self.setTimeout("hideDiv()",5000); // 초 지정
+
+function fadeInOut(id,io)
+      {
+         var level = null;
+         var timer = null;
+         if( io == "in" ) level = 0;
+         else if( io == "out" ) level = 1;
+         else return;
+         timer = setInterval( function(){ level = fadeInOutAction(id, io, level, timer); }, 50 );
+      }
+ 
+      function fadeInOutAction(id, io, level, timer)
+      {
+         if( io == "in" ) level = level + 0.03;
+         else if( io == "out" ) level = level - 0.03;
+         else return;
+         changeOpacity(id, level);
+         if( io == "in" && level > 1 )
+         {
+            clearInterval(timer);
+         }
+         else if( io == "out" && level < 0 )
+         {
+            clearInterval(timer);
+         }
+         return level;
+      }
+ 
+      function changeOpacity(id,level) 
+      {
+         var obj = document.getElementById(id);
+         obj.style.opacity = level; 
+         obj.style.MozOpacity = level; 
+         obj.style.KhtmlOpacity = level;
+         obj.style.MsFilter = "'progid:DXImageTransform.Microsoft.Alpha(Opacity=" + (level * 100) + ")'";
+         obj.style.filter = "alpha(opacity=" + (level * 100) + ");"; 
+      }
+
+
+</script>
+   <style>
+   body {
+      background-image: url("./intro_background.jpg");
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-attachment: fixed;
+   }
+   <!--
+   background-image : url(배경이미지의 위치)
+   background-repeat : 배경이미지의 반복 설정 (no-repeat = 반복 없음)
+   background-position : 배경이미지의 위치(right top = 오른쪽 위)
+   background-attachment : 배경이미지의 고정 여부(fixed)
+   -->
+   </style>
+   <style type="text/css">
+   body { color:#FFFFFF; }
+   </style>
+   </head>
+   <body style="background-color:#000000">
+   <div id="l01">
+   <center><br><br><br><br><br>
+   <span id="t01" style="color:red"><font face="cursive">
+   유선이는 괴롭힘을 당해왔다. <br><br>
+   어머니와 선생님, 반에 다른친구들은 유선이를 모른체하고 괴롭힘의 정도는 점점 더 심해지고있다. <br><br>
+   그러던 어느날 나는 유선이를 따로 불러서 괴롭히는 도중 사고가 일어나 유선이는 죽게되었다. <br><br>
+   그렇게 나는 모든일을 은폐하기 위해서 유선이의 시체를 비오는날 강가에다가 던져버렸다. <br><br>
+   유선이가 사라지자 애들은 괴롭힘의 대상이 나로 변했다. <br><br>
+   나는 더이상 버틸 수 없어서 나를 괴롭히는 정호, 지수, 승기, 호준이를 모두 죽이겠다 마음먹었다. <br><br>
+   유선이의 죽음으로 나에게 아는게 없냐는 유선이의 어머님의 말에 나는 유선이의 어머니를 이용하기로했고 <br><br>
+   모든것을 유선이의 어머님이 꾸민 일로만들고 <br><br>
+   이기적인 그들이라면 절대 엘리베이터에서 남겠다고 하지 않을것을 알고 <br><br>
+   마지막방에서 모두를 죽일 계획을 해두었다. <br><br>
+   그렇게 나는 문안으로 들어간 모두를 가두고 이 집에서 빠져나갔다.<br><br>
+   </font>
+   </span>
+   <img id="i01" src="./ending.jpg"><br><br>

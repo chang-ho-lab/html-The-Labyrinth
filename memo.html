@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<head>
+<title>메모장</title>
+<script>
+
+window.onload=function() {
+ document.getElementById("저장").onclick=processText;
+}
+
+function processText() {
+ var txtBox = document.getElementById("inputbox");
+ var lines = txtBox.value.split("\n");
+
+ // generate HTML version of text
+ var resultString  = "<p>";
+ for (var i = 0; i < lines.length; i++) {
+   resultString += lines[i] + "<br />";
+ }
+ resultString += "</p>";
+
+ // print out to page
+ var   blk   = document.getElementById("result");
+ blk.innerHTML  =  resultString; 
+}
+
+</script>
+
+</head>
+<body>
+<textarea id="inputbox" cols="90" rows="18"></textarea>
+<div><button id="저장">저장</button></div>
+<div id="result"></div>
+</body>
